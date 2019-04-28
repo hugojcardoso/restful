@@ -8,7 +8,7 @@ let app = express();
 app.use(bodyparser.urlencoded({extended: false}));
 app.use(bodyparser.json());
 
-consign().include('routes').into(app);
+consign().include('routes').include('utils').into(app);
 
 app.listen(3000, '127.0.0.1',()=>{
 
